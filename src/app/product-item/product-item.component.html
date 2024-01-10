@@ -1,0 +1,13 @@
+<div class="thumbnail mt-10" style="margin-top: 20px">
+  <img src="http://placehold.it/320x150" />
+  <div class="caption">
+    <h4 class="float-right">{{ product.price | currency }}</h4>
+    <h4>
+      <a [routerLink]="['/product', product.id]">{{ product.title }}</a>
+    </h4>
+    <p>{{ product.description }}</p>
+  </div>
+  <div class="ratings">
+    <app-stars [rating]="product.rating" [count]="7"></app-stars>
+  </div>
+</div>

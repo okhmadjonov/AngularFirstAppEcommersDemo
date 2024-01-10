@@ -1,0 +1,21 @@
+<!-- <div class="thumbnail">
+  <img src="http://placehold.it/820x320" />
+  <div>
+    <h4 class="float-right">{{ product.price }}</h4>
+    <h4>{{ product.title }}</h4>
+    <p>{{ product.description }}</p>
+  </div> -->
+
+<div class="thumbnail">
+  <img src="http://placehold.it/820x320" />
+  <div *ngIf="product">
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.description }}</p>
+    <div class="ratings">
+      <p><app-stars [rating]="product.rating"></app-stars></p>
+    </div>
+  </div>
+  <div *ngIf="!product">
+    <p>Product not found.</p>
+  </div>
+</div>
